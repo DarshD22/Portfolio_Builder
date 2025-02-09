@@ -9,10 +9,11 @@ const { v4: uuidv4 } = require('uuid');
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: process.env.FRONTEND_URL,
-  credentials: true
-}));
+// app.use(cors({
+//   origin: process.env.FRONTEND_URL,
+//   credentials: true
+// }));
+app.use(cors());
 app.use(express.json());
 
 // File upload configuration

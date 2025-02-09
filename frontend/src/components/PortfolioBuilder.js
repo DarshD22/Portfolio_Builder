@@ -6,6 +6,18 @@ import CodeIntegration from './CodeIntegration';
 import MediaUploader from './MediaUploader';
 import SkillShowcase from './SkillShowcase';
 import PortfolioShare from './PortfolioShare';
+import template1Image from '../assets/templates/Template1.png';
+import template2Image from '../assets/templates/Template2.png';
+import template3Image from '../assets/templates/Template3.png';
+
+// Create a mapping object for the template images
+const templateImages = {
+  template1: template1Image,
+  template2: template2Image,
+  template3: template3Image
+};
+
+
 
 const PortfolioBuilder = () => {
   const [selectedTemplate, setSelectedTemplate] = useState('template1');
@@ -75,7 +87,7 @@ const PortfolioBuilder = () => {
                   onClick={() => handleTemplateSelect(template)}
                 >
                   <img
-                    src={`/templates/${template}.png`}
+                    src={templateImages[template]}
                     alt={template}
                     className="w-full h-48 object-cover"
                   />
